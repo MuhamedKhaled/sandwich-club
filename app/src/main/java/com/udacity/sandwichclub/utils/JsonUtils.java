@@ -22,23 +22,18 @@ public class JsonUtils {
         JSONObject sandwitch_name = sandwitch.getJSONObject("name");
 
         sandwich_Data.setMainName((String) sandwitch_name.get("mainName"));
-
-
         sandwich_Data.setAlsoKnownAs(parseJSONArray(sandwitch_name.getJSONArray("alsoKnownAs")));
 
         sandwich_Data.setPlaceOfOrigin(sandwitch.getString("placeOfOrigin"));
         sandwich_Data.setDescription(sandwitch.getString("description"));
         sandwich_Data.setImage(sandwitch.getString("image"));
-
        sandwich_Data.setIngredients(parseJSONArray(sandwitch.getJSONArray("ingredients")));
-
 /*
         Log.d("parseSandwichJson: ", sandwich_Data.getMainName());
         Log.d("parseSandwichJson: ", sandwich_Data.getDescription());
         Log.d("parseSandwichJson: ", sandwich_Data.getPlaceOfOrigin());
         Log.d("parseSandwichJson: ", sandwich_Data.getImage());
 */
-
 
 
         return sandwich_Data;
